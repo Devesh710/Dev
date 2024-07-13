@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Number Conversion</h1>
+        <div class="container">
+            <div class="from-lable">
+                <label for="from">From</label>
+                <label for="to">To</label>
+            </div>
+            <div class="from-to">
+                <div class="from">
+                    <select name="from" id="from">
+                        <option value="decimal">Decimal</option>
+                        <option value="binary">Binary</option> 
+                    </select>
+                </div>
+                <div class="to">
+                    <select name="to" id="to">
+                        <option  value="binary">Binary</option>
+                        <option value="decimal">Decimal</option>
+                    </select>
+                </div>
+            </div>
+            <div class="enter-number">
+                <label id="label1" for="input">Enter Decimal Number</label>
+                <input type="number" name="number" id="enter-num" required>
+                <button type="submit" id="convert-btn">Convert</button>
+            </div>
+            <div class="return-number">
+                <label id="label2" for="output">Binary Number</label>
+                <p id="return-num"></p>
+                <!-- <input type="number" name="return" id="return-num" disabled>  -->
+            </div>
+            <div class="calculation-step">
+              <label id="steps" for="calculation">Decimal to binary calculation steps</label>
+              <div id="binary-table"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="calculation.js"></script>
+</body>
+</html>
