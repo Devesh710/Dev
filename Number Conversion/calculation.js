@@ -1,25 +1,4 @@
-// let binaryArray = new Array(32).fill(0);
-
-// const getbinary = (decimal) => {
-//     let i = 0;
-//     let binaryString= '';
-//     while(decimal > 0){
-//         binaryArray[i] = decimal % 2;
-//         decimal =Math.floor(decimal / 2);  
-//         i++;
-//     }
-
-//     for(let j = i - 1; j >= 0; j-- ){
-//         console.log(binaryArray[j]); 
-//         binaryString += binaryArray[j];
-//     }
-//   returnNum.innerText = binaryString;
-// };
-
-// function clickValue(decimal){
-//     console.log(decimal);
-//     getbinary(decimal);
-// }
+//Decimal To Binary
 
 let binaryArray = new Array(32).fill(0);
 let quotientArray = [];
@@ -40,17 +19,46 @@ const getbinary = (decimal) => {
   }
 
   tableHtml += '</table>';
+  console.log(tableHtml);
   document.getElementById('binary-table').innerHTML = tableHtml;
-  calculationStep.classList.remove("calculation-step");
-
+ 
   for (let j = i - 1; j >= 0; j--) {
     binaryString += binaryArray[j];
   }
- // document.getElementById('returnNum').innerText = binaryString;
+  
  returnNum.innerText = binaryString;
 };
 
-function clickValue(decimal) {
-  // console.log(decimal);
+function clickDecimal(decimal) {
   getbinary(decimal);
 }
+
+
+// Binary To Decimal
+
+const getDecimal = (binary) => {
+  let decimal = 0;
+  let binaryArray = binary.split('');
+  let power = 0;
+  let pHtml = `(${binary})<sub>2</sub> = `;
+
+  for (let i = binaryArray.length - 1; i >= 0; i--) {
+    let binaryDigit = binaryArray[i];
+    let decimalValue = Math.pow(2, power) * binaryDigit;
+    decimal += decimalValue;
+    pHtml += `(${binaryDigit} × 2<sup>${power}</sup>) + `;
+    power++;
+  }
+
+  pHtml = pHtml.replace(/\+ $/, `= (${decimal})<sub>10</sub>`);
+  console.log(pHtml);
+  document.getElementById('phtml').innerHTML = pHtml;
+  calculationStep.classList.remove("calculation-step");
+  returnNum.innerText = decimal;
+};
+
+function clickBinary(binary) {
+  getDecimal(binary);
+}
+
+
