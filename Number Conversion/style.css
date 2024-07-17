@@ -6,7 +6,6 @@
 h1{
     text-align: center;
     margin-top: 5%;
-
 }
 
 .container{
@@ -18,7 +17,6 @@ h1{
 
 .from-lable label:nth-child(1){
     margin-right: 52.5%;
-
 }
 
 .from-to{
@@ -60,7 +58,6 @@ textarea {
 #convert-btn{
     width: 100px;
     height: 40px;
-
 }
 
 .return-number{
@@ -105,7 +102,6 @@ td{
 #decimal-table p{
     background-color:white;
     width: 100%;
-    /* height: 20px auto; */
     padding: 20px auto;
     margin-bottom: 20px ;
     border: 1px solid #ddd;
