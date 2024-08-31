@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt And Decrypt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/04cdc07927.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <center>
+            <div class="container"> 
+                <div class="En-De">
+                    <div class="Encrypt">
+                        
+                        <button id="enButton"><i class="fa-solid fa-lock"></i> Encrypt Text</button>
+                    </div>
+                    <div class="Decrypt">                    
+                        <button id="deButton"><i class="fa-solid fa-lock-open"></i>  Decrypt Text</button>
+                    </div>
+                </div>
+                <div class="getinput">
+                    <label id="msg">Type a message</label><br>
+                    <input id="getText" type="text" placeholder=""><br>
+
+                    <label id="key-lable">Enter Key</label><br>
+                    <input id="getKey" placeholder="Enter Key" type="number"><br>
+                    <p id="error-msg"><p>
+                </div>  
+                <label class="hide" id="convert-msg">Encrypt message</label><br>     
+                <p class="hide" id="show-convert-msg">.</p>
+
+                <button  id="convert-btn">Convert</button>
+            </div>
+        </center>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

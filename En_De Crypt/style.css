@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url("Mukta-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #3e4444;
+}
+
+.container{
+    width: 55vh;
+    height: 65vh;
+    margin-top: 100px;
+    padding: 100px 50px 80px 50px;
+    background-color:#e6e2d3;
+}
+
+.En-De{
+    display: flex;
+    justify-content:space-between ;
+    margin-top: -75px;
+    padding: 5px;
+}
+
+.Encrypt{
+    margin-left: -10px;
+}
+
+.Decrypt{
+    margin-right: -10px;
+}
+
+.Encrypt,
+.Decrypt,
+button
+{
+    background-color: #3e4444;
+    color: #e6e6e6;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+}
+
+.getinput{
+ margin-top: 25px;
+}
+
+#msg{
+    margin: 0px 0px 0px -160px;
+}
+
+#getText,
+#getKey{
+    width: 265px;
+    margin: 0px 0px 20px -6px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#key-lable{
+    margin: 10px 0px 0px -198px;
+}
+
+#error-msg{
+    color: red;   
+    margin: -25px 0 10px -42px;
+    display: none;
+}
+
+#convert-msg{
+    margin: 10px 0px 0px -150px;
+}
+
+#show-convert-msg{
+    background-color: white;
+    width: 265px;
+    height: 30px auto;
+    padding: 0px 10px;
+    margin: 5px 0px 20px -6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.hide{
+    display: none;
+}
+
+#convert-btn:hover{
+ border: #ddd;
+ box-Shadow: 0px 0px 0px 1px white;
+}
+
